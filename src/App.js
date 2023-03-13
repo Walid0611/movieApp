@@ -17,8 +17,10 @@ function App() {
     <div className="App">
    <Navbar/>
     <Filter/>
-  <Add/>
+  
 <MovieList  ListMovies={ListMovies}  />
+<hr/>
+<Add/>
 
 
 
