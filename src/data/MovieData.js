@@ -1,10 +1,9 @@
-export const movies = 
-[
+export const movies= [
     {
                 id: 1 ,
                 Title:  "Wednesday" ,
                  Description :  "Horror" ,
-                 PosterURL :  "https://m.media-amazon.com/images/I/41YZTePdSOL._AC_.jpg" ,
+                 PosterURL :  "https://alternativemovieposters.com/wp-content/uploads/2023/01/Haley-Turnbull_Wednesday.jpg" ,
                  Rate : 5, 
     },
     {
@@ -48,4 +47,3 @@ export const movies =
                      Rate :  5 ,
 
             }];
-            

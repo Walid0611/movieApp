@@ -1,6 +1,6 @@
 import React from 'react'
-import "./Filter.css"
-const Filter = ({setFilter}) => {
+import "./Search.css"
+const Search = ({setNAmeSearch}) => {
   return (
     <div>
     <div className="box">
@@ -9,7 +9,7 @@ const Filter = ({setFilter}) => {
           type="text"
           className="inputSearch"
           name="txt"
-          onChange={(e)=>setFilter(e.target.value)}
+          onChange={(e)=>setNAmeSearch(e.target.value)}
         />
       </form>
       <i className="fas fa-search" />
@@ -21,4 +21,4 @@ const Filter = ({setFilter}) => {
   )
 }
 
-export default Filter
+export default Search

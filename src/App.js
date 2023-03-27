@@ -1,35 +1,36 @@
-import {useState} from "react";
-import Filter from "./compment/Filter";
-import Navbar from "./compment/Navbar";
-import MovieList from "./compment/MovieList";
-import Add from "./compment/Add";
-import { movies } from "./compment/Datta"
+import React, { useState } from 'react'
+import AddMovie from './Components/AddMoive'
+import MovieList from './Components/MovieList'
+import Search from './Components/Search'
+import {movies} from './data/MovieData'
 
-
-
-console.log('test',movies)
-function App() {
-  const [ListMovies ,setListMovie]=useState(movies) 
-
-
+const App = () => {
   
-  return (
-    <div className="App">
-   <Navbar/>
-    <Filter/>
-  
-<MovieList  ListMovies={ListMovies}  />
-<hr/>
-<Add/>
-
-
-
-
-
-
-
-    </div>
-  );
+  const [ListMovie,setListMovie]=useState(movies)
+       
+const handelAddMovie=(newMovie)=>{
+setListMovie(
+  [...ListMovie,newMovie]
+)
 }
 
-export default App;
+
+
+const [nameSearch,setNAmeSearch]=useState('')
+
+  return (
+    <div>
+      
+      <Search  setNAmeSearch={setNAmeSearch} />
+
+
+      <MovieList ListMovie={ListMovie}  nameSearch={nameSearch}/>
+
+      <hr/>
+      
+      <AddMovie  handelAddMovie={handelAddMovie}/>
+    </div>
+  )
+}
+
+export default App
